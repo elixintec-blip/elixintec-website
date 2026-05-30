@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 120" width="440" height="120">
+  <!-- Globe circle fill -->
+  <circle cx="60" cy="60" r="52" fill="rgba(255,255,255,0.12)"/>
+
+  <!-- Latitude lines -->
+  <ellipse cx="60" cy="26"  rx="36" ry="9"  fill="none" stroke="white" stroke-width="1.8" opacity="0.9"/>
+  <ellipse cx="60" cy="60"  rx="52" ry="13" fill="none" stroke="white" stroke-width="1.8" opacity="0.9"/>
+  <ellipse cx="60" cy="94"  rx="36" ry="9"  fill="none" stroke="white" stroke-width="1.8" opacity="0.9"/>
+
+  <!-- Longitude lines -->
+  <ellipse cx="60" cy="60" rx="17" ry="52" fill="none" stroke="white" stroke-width="1.8" opacity="0.9"/>
+  <ellipse cx="60" cy="60" rx="40" ry="52" fill="none" stroke="white" stroke-width="1.5" opacity="0.55"/>
+
+  <!-- Outer border -->
+  <circle cx="60" cy="60" r="52" fill="none" stroke="white" stroke-width="2.5"/>
+
+  <!-- ELIXINTEC -->
+  <text x="132" y="68"
+    font-family="Poppins, Arial Black, sans-serif"
+    font-weight="800"
+    font-size="40"
+    letter-spacing="1.5"
+    fill="white">ELIXINTEC</text>
+
+  <!-- Tagline -->
+  <text x="134" y="92"
+    font-family="Arial, sans-serif"
+    font-weight="500"
+    font-size="12.5"
+    letter-spacing="3.5"
+    fill="rgba(255,255,255,0.65)">— WE FIND THE WAY —</text>
+</svg>

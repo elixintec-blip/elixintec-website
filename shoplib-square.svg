@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500">
+  <defs>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFE566"/>
+      <stop offset="45%" style="stop-color:#FFD700"/>
+      <stop offset="75%" style="stop-color:#B8860B"/>
+      <stop offset="100%" style="stop-color:#FFD700"/>
+    </linearGradient>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0D0D0D"/>
+      <stop offset="100%" style="stop-color:#050505"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softglow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="500" height="500" fill="url(#bgGrad)"/>
+
+  <!-- Corner decorations -->
+  <line x1="24" y1="18" x2="68" y2="18" stroke="#C8960C" stroke-width="1.5"/>
+  <line x1="24" y1="18" x2="24" y2="62" stroke="#C8960C" stroke-width="1.5"/>
+  <line x1="476" y1="18" x2="432" y2="18" stroke="#C8960C" stroke-width="1.5"/>
+  <line x1="476" y1="18" x2="476" y2="62" stroke="#C8960C" stroke-width="1.5"/>
+  <line x1="24" y1="482" x2="68" y2="482" stroke="#C8960C" stroke-width="1.5"/>
+  <line x1="24" y1="482" x2="24" y2="438" stroke="#C8960C" stroke-width="1.5"/>
+  <line x1="476" y1="482" x2="432" y2="482" stroke="#C8960C" stroke-width="1.5"/>
+  <line x1="476" y1="482" x2="476" y2="438" stroke="#C8960C" stroke-width="1.5"/>
+
+  <!-- Top thin line -->
+  <line x1="80" y1="30" x2="420" y2="30" stroke="#C8960C" stroke-width="0.5" opacity="0.4"/>
+  <!-- Bottom thin line -->
+  <line x1="80" y1="470" x2="420" y2="470" stroke="#C8960C" stroke-width="0.5" opacity="0.4"/>
+
+  <!-- Large Diamond Icon -->
+  <polygon points="250,78 336,200 250,322 164,200" fill="none" stroke="url(#gold)" stroke-width="3" filter="url(#softglow)"/>
+  <polygon points="250,96 318,200 250,304 182,200" fill="none" stroke="url(#gold)" stroke-width="1" opacity="0.35"/>
+
+  <!-- S inside diamond -->
+  <text x="250" y="226"
+    font-family="'Palatino Linotype', Georgia, serif"
+    font-size="110" font-weight="bold"
+    fill="url(#gold)" text-anchor="middle"
+    filter="url(#glow)">S</text>
+
+  <!-- Diamond dots -->
+  <circle cx="250" cy="70" r="5" fill="url(#gold)"/>
+  <circle cx="250" cy="330" r="5" fill="url(#gold)"/>
+  <circle cx="156" cy="200" r="5" fill="url(#gold)"/>
+  <circle cx="344" cy="200" r="5" fill="url(#gold)"/>
+
+  <!-- Separator line -->
+  <line x1="80" y1="352" x2="420" y2="352" stroke="url(#gold)" stroke-width="0.8" opacity="0.6"/>
+  <text x="100" y="351" font-size="12" fill="#C8960C" font-family="serif">✦</text>
+  <text x="374" y="351" font-size="12" fill="#C8960C" font-family="serif">✦</text>
+
+  <!-- Brand Name -->
+  <text x="250" y="408"
+    font-family="'Palatino Linotype', Palatino, 'Book Antiqua', Georgia, serif"
+    font-size="56" font-weight="bold"
+    fill="url(#gold)" text-anchor="middle"
+    letter-spacing="10" filter="url(#glow)">SHOPLIB</text>
+
+  <!-- Tagline -->
+  <text x="250" y="444"
+    font-family="Georgia, serif" font-size="13"
+    fill="#C8960C" text-anchor="middle" letter-spacing="5">LUXURY PERFUMES · LIBYA</text>
+
+  <!-- Arabic -->
+  <text x="250" y="464"
+    font-family="'Palatino Linotype', Georgia, serif" font-size="12"
+    fill="#555" text-anchor="middle" letter-spacing="2">عطور فاخرة</text>
+</svg>

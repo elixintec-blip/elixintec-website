@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 220" width="500" height="220">
+  <defs>
+
+    <!-- Gold gradient -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   style="stop-color:#f5e27a"/>
+      <stop offset="40%"  style="stop-color:#d4a017"/>
+      <stop offset="70%"  style="stop-color:#f0c040"/>
+      <stop offset="100%" style="stop-color:#a07800"/>
+    </linearGradient>
+
+    <!-- Gold shimmer for text -->
+    <linearGradient id="goldText" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   style="stop-color:#fff3a0"/>
+      <stop offset="30%"  style="stop-color:#e8c44a"/>
+      <stop offset="60%"  style="stop-color:#c9960a"/>
+      <stop offset="100%" style="stop-color:#e8c44a"/>
+    </linearGradient>
+
+    <!-- Dark bg gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   style="stop-color:#0d0d0d"/>
+      <stop offset="100%" style="stop-color:#1c1a14"/>
+    </linearGradient>
+
+    <!-- Glow filter -->
+    <filter id="goldGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Soft shadow -->
+    <filter id="softShadow">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#d4a017" flood-opacity="0.35"/>
+    </filter>
+
+  </defs>
+
+  <!-- Background -->
+  <rect width="500" height="220" fill="url(#bgGrad)" rx="18"/>
+
+  <!-- Outer gold border frame -->
+  <rect x="10" y="10" width="480" height="200" rx="12"
+    fill="none" stroke="url(#goldGrad)" stroke-width="1.5" opacity="0.6"/>
+
+  <!-- Inner subtle border -->
+  <rect x="14" y="14" width="472" height="192" rx="10"
+    fill="none" stroke="url(#goldGrad)" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- ══════ ICON: Crown Emblem ══════ -->
+  <g transform="translate(250,0)" filter="url(#softShadow)">
+
+    <!-- Crown base -->
+    <rect x="-28" y="71" width="56" height="12" rx="3" fill="url(#goldGrad)"/>
+
+    <!-- Crown spikes -->
+    <!-- Left spike -->
+    <polygon points="-28,71 -22,42 -12,62" fill="url(#goldGrad)"/>
+    <!-- Center spike (tall) -->
+    <polygon points="-8,68  0,34  8,68"   fill="url(#goldGrad)"/>
+    <!-- Right spike -->
+    <polygon points="12,62  22,42  28,71" fill="url(#goldGrad)"/>
+
+    <!-- Jewels on crown -->
+    <circle cx="-20" cy="68" r="4" fill="#1c1a14" stroke="url(#goldGrad)" stroke-width="1"/>
+    <circle cx="0"   cy="68" r="4" fill="#1c1a14" stroke="url(#goldGrad)" stroke-width="1"/>
+    <circle cx="20"  cy="68" r="4" fill="#1c1a14" stroke="url(#goldGrad)" stroke-width="1"/>
+
+    <!-- Gem fill colors -->
+    <circle cx="-20" cy="68" r="2.5" fill="#e83a3a" opacity="0.85"/>
+    <circle cx="0"   cy="68" r="2.5" fill="#3ac5e8" opacity="0.85"/>
+    <circle cx="20"  cy="68" r="2.5" fill="#3ae87a" opacity="0.85"/>
+
+  </g>
+
+  <!-- ══════ SHOPLIB Text ══════ -->
+  <!-- SHOP -->
+  <text x="250" y="138"
+    font-family="'Georgia', 'Times New Roman', serif"
+    font-size="54"
+    font-weight="700"
+    fill="url(#goldText)"
+    text-anchor="middle"
+    letter-spacing="8"
+    filter="url(#goldGlow)">SHOPLIB</text>
+
+  <!-- Decorative line left -->
+  <line x1="50" y1="153" x2="175" y2="153"
+    stroke="url(#goldGrad)" stroke-width="0.8" opacity="0.6"/>
+
+  <!-- Diamond separator left -->
+  <polygon points="190,149 196,153 190,157 184,153"
+    fill="url(#goldGrad)" opacity="0.8"/>
+
+  <!-- LY tagline center -->
+  <text x="250" y="163"
+    font-family="'Georgia', serif"
+    font-size="11"
+    fill="url(#goldGrad)"
+    text-anchor="middle"
+    letter-spacing="6"
+    opacity="0.85">LIBYA</text>
+
+  <!-- Diamond separator right -->
+  <polygon points="310,149 316,153 310,157 304,153"
+    fill="url(#goldGrad)" opacity="0.8"/>
+
+  <!-- Decorative line right -->
+  <line x1="325" y1="153" x2="450" y2="153"
+    stroke="url(#goldGrad)" stroke-width="0.8" opacity="0.6"/>
+
+  <!-- Tagline bottom -->
+  <text x="250" y="185"
+    font-family="'Arial', sans-serif"
+    font-size="9.5"
+    fill="#a07800"
+    text-anchor="middle"
+    letter-spacing="5"
+    opacity="0.7">PREMIUM  STORE</text>
+
+</svg>

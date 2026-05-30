@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(xargs sed:*)",
+      "Bash(python3 -c \"print\\('hello'\\)\")",
+      "Bash(start \"\" \"c:\\\\Users\\\\achra\\\\Desktop\\\\ELIX\\\\index.html\")",
+      "WebFetch(domain:unsplash.com)"
+    ]
+  }
+}

@@ -1,0 +1,493 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Flyer ELIXINTEC</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #e8edf4;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 40px 20px;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+
+    .print-btn {
+      position: fixed; top: 20px; right: 20px;
+      background: #1E3A6E; color: white;
+      border: none; padding: 12px 24px; border-radius: 8px;
+      font-size: 0.95rem; font-weight: 700; cursor: pointer;
+      font-family: 'Poppins', sans-serif;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+      z-index: 100;
+    }
+    .print-btn:hover { background: #2D5BA0; }
+
+    /* ── FLYER A4 ── */
+    .flyer {
+      width: 210mm;
+      min-height: 297mm;
+      background: white;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.18);
+    }
+
+    /* TOP HEADER */
+    .flyer-header {
+      background: #1E3A6E;
+      padding: 36px 40px 28px;
+      position: relative;
+      overflow: hidden;
+    }
+    .flyer-header::before {
+      content: '';
+      position: absolute;
+      top: -60px; right: -60px;
+      width: 220px; height: 220px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.05);
+    }
+    .flyer-header::after {
+      content: '';
+      position: absolute;
+      bottom: -40px; left: 30%;
+      width: 180px; height: 180px;
+      border-radius: 50%;
+      background: rgba(13,148,136,0.15);
+    }
+    .header-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 28px;
+    }
+    .logo-area { display: flex; align-items: center; gap: 14px; }
+    .logo-img-wrap img {
+      height: 52px; width: auto;
+    }
+    .logo-text-wrap .name {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 900;
+      font-size: 1.7rem;
+      color: white;
+      letter-spacing: -0.5px;
+      line-height: 1;
+    }
+    .logo-text-wrap .tagline {
+      font-size: 0.65rem;
+      color: #0D9488;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-top: 3px;
+    }
+    .cert-badges { display: flex; gap: 10px; flex-wrap: wrap; }
+    .cert-badge {
+      background: rgba(13,148,136,0.15);
+      border: 1px solid rgba(13,148,136,0.15);
+      color: #0D9488;
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+    .header-headline {
+      position: relative; z-index: 1;
+    }
+    .header-headline h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.9rem;
+      font-weight: 800;
+      color: white;
+      line-height: 1.2;
+      margin-bottom: 10px;
+    }
+    .header-headline h1 span { color: #0D9488; }
+    .header-headline p {
+      color: rgba(255,255,255,0.75);
+      font-size: 0.88rem;
+      line-height: 1.6;
+      max-width: 480px;
+    }
+
+    /* ACCENT STRIP */
+    .accent-strip {
+      background: #0D9488;
+      padding: 12px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .strip-item {
+      display: flex; align-items: center; gap: 8px;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700; font-size: 0.82rem;
+      color: #ffffff;
+    }
+    .strip-dot { width: 6px; height: 6px; border-radius: 50%; background: rgba(255,255,255,0.7); }
+
+    /* BODY */
+    .flyer-body { padding: 32px 40px; flex: 1; }
+
+    .section-title {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: #0D9488;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    .section-heading {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #1E3A6E;
+      margin-bottom: 20px;
+    }
+
+    /* SERVICES GRID */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+    .service-item {
+      background: #F4F7FB;
+      border-radius: 10px;
+      padding: 14px 12px;
+      border-left: 3px solid #1E3A6E;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    .service-item .si-icon { font-size: 1.3rem; flex-shrink: 0; }
+    .service-item .si-text h4 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: #1E3A6E;
+      margin-bottom: 2px;
+    }
+    .service-item .si-text p {
+      font-size: 0.68rem;
+      color: #64748B;
+      line-height: 1.4;
+    }
+
+    /* WHY US */
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+    .why-item {
+      text-align: center;
+      background: #1E3A6E;
+      border-radius: 10px;
+      padding: 16px 10px;
+    }
+    .why-item .wi-num {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.6rem;
+      font-weight: 900;
+      color: #0D9488;
+      line-height: 1;
+    }
+    .why-item .wi-lbl {
+      font-size: 0.68rem;
+      color: rgba(255,255,255,0.75);
+      margin-top: 4px;
+      line-height: 1.3;
+    }
+
+    /* CITIES */
+    .cities-row {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 28px;
+      flex-wrap: wrap;
+    }
+    .city-tag {
+      background: white;
+      border: 1.5px solid #1E3A6E;
+      color: #1E3A6E;
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* TESTIMONIAL */
+    .testimonial-box {
+      background: linear-gradient(135deg, #1E3A6E, #2D5BA0);
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin-bottom: 28px;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+    .quote-icon {
+      font-size: 2.5rem;
+      color: #0D9488;
+      line-height: 1;
+      flex-shrink: 0;
+      font-family: Georgia, serif;
+    }
+    .testimonial-box p {
+      color: rgba(255,255,255,0.9);
+      font-size: 0.82rem;
+      line-height: 1.6;
+      font-style: italic;
+      margin-bottom: 6px;
+    }
+    .testimonial-box .t-author {
+      color: #0D9488;
+      font-size: 0.72rem;
+      font-weight: 700;
+      font-style: normal;
+    }
+
+    /* FOOTER */
+    .flyer-footer {
+      background: #0D1B35;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .contact-item {
+      display: flex; align-items: center; gap: 8px;
+      color: rgba(255,255,255,0.85);
+      font-size: 0.78rem;
+    }
+    .contact-item .ci-icon {
+      width: 28px; height: 28px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.9rem;
+      flex-shrink: 0;
+    }
+    .contact-item strong {
+      color: white;
+      font-size: 0.82rem;
+    }
+
+    /* CTA BUTTON */
+    .cta-box {
+      background: linear-gradient(135deg, #0D9488, #A8823E);
+      border-radius: 12px;
+      padding: 18px 24px;
+      text-align: center;
+      margin-bottom: 28px;
+    }
+    .cta-box p {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 4px;
+    }
+    .cta-box span {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.85);
+    }
+
+    /* PRINT */
+    @media print {
+      body { background: white; padding: 0; }
+      .print-btn { display: none; }
+      .flyer {
+        width: 210mm;
+        min-height: 297mm;
+        box-shadow: none;
+        margin: 0;
+        page-break-after: always;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<button class="print-btn" onclick="window.print()">🖨️ Imprimer / Enregistrer PDF</button>
+
+<!-- ══ FLYER ══════════════════════════════════════════════════════ -->
+<div class="flyer">
+
+  <!-- HEADER -->
+  <div class="flyer-header">
+    <div class="header-top">
+      <div class="logo-area">
+        <div class="logo-img-wrap">
+          <img src="images/logo.svg" alt="ELIXINTEC" onerror="this.style.display='none'" />
+        </div>
+        <div class="logo-text-wrap">
+          <div class="name">ELIXINTEC</div>
+        </div>
+      </div>
+      <div class="cert-badges">
+        <div class="cert-badge">✓ Crestron Certified</div>
+        <div class="cert-badge">✓ KNX Partner</div>
+      </div>
+    </div>
+    <div class="header-headline">
+      <h1>Transformez Votre Espace en<br/><span>Environnement Intelligent</span></h1>
+      <p>Solutions sur mesure en domotique, courant faible et intégration technologique. Expertise certifiée, résultats garantis.</p>
+    </div>
+  </div>
+
+  <!-- ACCENT STRIP -->
+  <div class="accent-strip">
+    <div class="strip-item"><div class="strip-dot"></div>18 ans d'expérience</div>
+    <div class="strip-item"><div class="strip-dot"></div>150+ projets réalisés</div>
+    <div class="strip-item"><div class="strip-dot"></div>Certifié Crestron & KNX</div>
+    <div class="strip-item"><div class="strip-dot"></div>Devis 100% gratuit</div>
+  </div>
+
+  <!-- BODY -->
+  <div class="flyer-body">
+
+    <!-- SERVICES -->
+    <div class="section-title">Nos Expertises</div>
+    <div class="section-heading">Des Solutions pour Chaque Besoin</div>
+    <div class="services-grid">
+      <div class="service-item">
+        <div class="si-icon">🏠</div>
+        <div class="si-text">
+          <h4>Domotique</h4>
+          <p>Automatisation complète de votre maison ou bureau</p>
+        </div>
+      </div>
+      <div class="service-item">
+        <div class="si-icon">⚡</div>
+        <div class="si-text">
+          <h4>Courant Faible (CFA)</h4>
+          <p>VDI, câblage structuré, infrastructure réseau</p>
+        </div>
+      </div>
+      <div class="service-item">
+        <div class="si-icon">📶</div>
+        <div class="si-text">
+          <h4>Réseau & WiFi Pro</h4>
+          <p>Couverture totale, hôtels, villas, entreprises</p>
+        </div>
+      </div>
+      <div class="service-item">
+        <div class="si-icon">🎬</div>
+        <div class="si-text">
+          <h4>Home Cinéma</h4>
+          <p>Salle privée 4K, Dolby Atmos, écran motorisé</p>
+        </div>
+      </div>
+      <div class="service-item">
+        <div class="si-icon">🔊</div>
+        <div class="si-text">
+          <h4>Sonorisation</h4>
+          <p>Systèmes multizone pour villas et commerces</p>
+        </div>
+      </div>
+      <div class="service-item">
+        <div class="si-icon">🔒</div>
+        <div class="si-text">
+          <h4>Sécurité & Intrusion</h4>
+          <p>Alarmes, caméras IP 4K, contrôle d'accès</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- STATS -->
+    <div class="section-title">Pourquoi ELIXINTEC ?</div>
+    <div class="why-grid">
+      <div class="why-item">
+        <div class="wi-num">18+</div>
+        <div class="wi-lbl">Ans d'expérience</div>
+      </div>
+      <div class="why-item">
+        <div class="wi-num">150+</div>
+        <div class="wi-lbl">Projets réalisés</div>
+      </div>
+      <div class="why-item">
+        <div class="wi-num">2</div>
+        <div class="wi-lbl">Certifications internationales</div>
+      </div>
+      <div class="why-item">
+        <div class="wi-num">4</div>
+        <div class="wi-lbl">Villes au Maroc</div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-box">
+      <p>🎁 Consultation & Devis 100% Gratuits</p>
+      <span>Contactez-nous aujourd'hui — Réponse sous 24h</span>
+    </div>
+
+    <!-- CITIES -->
+    <div class="section-title" style="margin-bottom:10px;">Zones d'Intervention</div>
+    <div class="cities-row">
+      <div class="city-tag">📍 Temara</div>
+      <div class="city-tag">📍 Rabat</div>
+      <div class="city-tag">📍 Casablanca</div>
+      <div class="city-tag">📍 Marrakech</div>
+      <div class="city-tag">📍 Et tout le Maroc</div>
+    </div>
+
+    <!-- TESTIMONIAL -->
+    <div class="testimonial-box">
+      <div class="quote-icon">"</div>
+      <div>
+        <p>Notre villa est devenue une référence dans le quartier. KNX, multiroom, home cinéma... tout fonctionne parfaitement. ELIXINTEC a transformé notre maison en espace de vie intelligent.</p>
+        <div class="t-author">— Mohammed R., Villa Souissi – Rabat</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER CONTACT -->
+  <div class="flyer-footer">
+    <div class="contact-item">
+      <div class="ci-icon">📞</div>
+      <div><div style="font-size:0.65rem;color:rgba(255,255,255,0.5);margin-bottom:1px;">TÉLÉPHONE</div><strong>+212 661 090 654</strong></div>
+    </div>
+    <div class="contact-item">
+      <div class="ci-icon">💬</div>
+      <div><div style="font-size:0.65rem;color:rgba(255,255,255,0.5);margin-bottom:1px;">WHATSAPP</div><strong>+212 665 311 687</strong></div>
+    </div>
+    <div class="contact-item">
+      <div class="ci-icon">✉️</div>
+      <div><div style="font-size:0.65rem;color:rgba(255,255,255,0.5);margin-bottom:1px;">EMAIL</div><strong>contact@elixintec.com</strong></div>
+    </div>
+    <div class="contact-item">
+      <div class="ci-icon">🌐</div>
+      <div><div style="font-size:0.65rem;color:rgba(255,255,255,0.5);margin-bottom:1px;">SITE WEB</div><strong>www.elixintec.com</strong></div>
+    </div>
+    <div class="contact-item">
+      <div class="ci-icon">📍</div>
+      <div><div style="font-size:0.65rem;color:rgba(255,255,255,0.5);margin-bottom:1px;">ADRESSE</div><strong>Lot Zahrat Al amal, Temara</strong></div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

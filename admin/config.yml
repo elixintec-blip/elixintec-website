@@ -1,0 +1,50 @@
+backend:
+  name: github
+  repo: elixintec-blip/elixintec-website
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+locale: fr
+
+collections:
+  - name: "settings"
+    label: "Parametres du site"
+    files:
+      - label: "Informations generales"
+        name: "general"
+        file: "_data/settings.json"
+        fields:
+          - {label: "Telephone", name: "phone", widget: "string"}
+          - {label: "Email", name: "email", widget: "string"}
+          - {label: "Adresse", name: "address", widget: "string"}
+          - {label: "WhatsApp", name: "whatsapp", widget: "string"}
+          - {label: "Stat 1 - Projets", name: "stat_projets", widget: "string"}
+          - {label: "Stat 2 - Annees experience", name: "stat_experience", widget: "string"}
+          - {label: "Stat 3 - Villes", name: "stat_villes", widget: "string"}
+
+  - name: "realisations"
+    label: "Realisations"
+    folder: "_realisations"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Titre", name: "title", widget: "string"}
+      - {label: "Categorie", name: "category", widget: "select", options: ["domotique", "cfa", "reseau", "sonorisation", "home-cinema", "securite"]}
+      - {label: "Image", name: "image", widget: "image"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Localisation", name: "location", widget: "string"}
+
+  - name: "blog"
+    label: "Articles Blog"
+    folder: "_posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Titre", name: "title", widget: "string"}
+      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Image de couverture", name: "image", widget: "image", required: false}
+      - {label: "Resume", name: "summary", widget: "text"}
+      - {label: "Contenu", name: "body", widget: "markdown"}
+      - {label: "Categorie", name: "category", widget: "select", options: ["Domotique", "CFA", "KNX", "Reseau WiFi", "Sonorisation", "Home Cinema", "Securite"]}
