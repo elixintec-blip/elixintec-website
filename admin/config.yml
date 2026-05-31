@@ -23,6 +23,25 @@ collections:
           - {label: "Stat 2 - Annees experience", name: "stat_experience", widget: "string"}
           - {label: "Stat 3 - Villes", name: "stat_villes", widget: "string"}
 
+  - name: "services"
+    label: "Pages Services"
+    files:
+      - label: "Contenu des services"
+        name: "services_content"
+        file: "_data/services.json"
+        fields:
+          - label: "Services"
+            name: "services"
+            widget: "list"
+            fields:
+              - {label: "Service (ne pas modifier)", name: "slug", widget: "string"}
+              - {label: "Photo Hero (optionnel)", name: "hero_image", widget: "image", required: false}
+              - {label: "Titre de la section intro", name: "intro_title", widget: "string"}
+              - {label: "Description principale", name: "intro_text", widget: "text"}
+              - label: "Liste des prestations"
+                name: "features"
+                widget: "list"
+
   - name: "realisations"
     label: "Realisations"
     files:

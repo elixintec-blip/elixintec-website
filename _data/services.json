@@ -1,0 +1,102 @@
+{
+  "services": [
+    {
+      "slug": "domotique",
+      "hero_image": "",
+      "intro_title": "Votre Maison, Intelligente et Connectée",
+      "intro_text": "La domotique moderne va bien au-delà d'un simple interrupteur connecté. Avec ELIXINTEC, votre domicile devient un écosystème intelligent qui anticipe vos besoins, optimise votre consommation énergétique et vous offre un confort inégalé. En tant que KNX Partner certifié, partenaire Loxone et intégrateur Crestron agréé, nous concevons des solutions sur mesure pour villas, appartements et bureaux au Maroc.",
+      "features": [
+        "Gestion intelligente de l'éclairage",
+        "Climatisation et chauffage (HVAC)",
+        "Volets roulants et stores motorisés",
+        "Scénarios d'ambiance personnalisés",
+        "Gestion énergétique et mesure de consommation",
+        "Intégration multiroom audio et home cinéma"
+      ]
+    },
+    {
+      "slug": "courant-faible",
+      "hero_image": "",
+      "intro_title": "Infrastructure CFA Complète et Fiable",
+      "intro_text": "Le courant faible (CFA) regroupe tous les systèmes de communication, de sécurité et d'automatisation d'un bâtiment. ELIXINTEC conçoit et réalise des infrastructures CFA complètes : câblage structuré VDI, vidéosurveillance, contrôle d'accès, téléphonie IP et domotique. Nos techniciens certifiés garantissent des installations durables et conformes aux normes en vigueur au Maroc.",
+      "features": [
+        "Câblage structuré VDI (cat6/fibre)",
+        "Téléphonie IP et IPBX",
+        "Contrôle d'accès biométrique",
+        "Vidéosurveillance IP",
+        "Sonorisation et interphonie",
+        "Réseau informatique et WiFi"
+      ]
+    },
+    {
+      "slug": "reseau-wifi",
+      "hero_image": "",
+      "intro_title": "Réseau WiFi Professionnel Sans Zone Morte",
+      "intro_text": "Nous déployons des infrastructures WiFi professionnelles Ubiquiti UniFi pour villas, hôtels, restaurants et entreprises. Fini les zones mortes et les déconnexions intempestives. Avec ELIXINTEC, bénéficiez d'une couverture totale, d'une gestion centralisée et d'une bande passante stable dans chaque recoin de votre propriété.",
+      "features": [
+        "WiFi professionnel Ubiquiti UniFi",
+        "Couverture totale sans zone morte",
+        "Gestion centralisée via contrôleur",
+        "Portail captif pour hôtels",
+        "VLAN et segmentation réseau",
+        "Monitoring et alertes en temps réel"
+      ]
+    },
+    {
+      "slug": "sonorisation",
+      "hero_image": "",
+      "intro_title": "Sonorisation Professionnelle sur Mesure",
+      "intro_text": "ELIXINTEC conçoit et installe des systèmes de sonorisation professionnels pour villas, hôtels, restaurants, showrooms et espaces commerciaux. Enceintes encastrées, amplificateurs, câblage audio... chaque installation est étudiée pour offrir la meilleure acoustique possible dans votre espace.",
+      "features": [
+        "Enceintes encastrées et de surface",
+        "Amplificateurs professionnels multizone",
+        "Système Sonos et multiroom",
+        "Câblage audio haute qualité",
+        "Contrôle par iPad/smartphone",
+        "Intégration Spotify et streaming"
+      ]
+    },
+    {
+      "slug": "home-cinema",
+      "hero_image": "",
+      "intro_title": "Salle de Cinéma Privée — L'Expérience Ultime",
+      "intro_text": "Vivez l'expérience cinéma chez vous avec une installation haut de gamme signée ELIXINTEC. Projection laser 4K Sony, son Dolby Atmos, fauteuils motorisés, acoustique sur mesure et contrôle Crestron centralisé. Nous transformons n'importe quelle pièce en une véritable salle de cinéma privée digne des plus grands complexes.",
+      "features": [
+        "Projecteur laser 4K Sony / Barco",
+        "Son Dolby Atmos 7.1.4 et plus",
+        "Écran motorisé acoustique transparent",
+        "Traitement acoustique sur mesure",
+        "Fauteuils motorisés haut de gamme",
+        "Contrôle Crestron tout-en-un"
+      ]
+    },
+    {
+      "slug": "multiroom",
+      "hero_image": "",
+      "intro_title": "Musique dans Toute Votre Maison",
+      "intro_text": "Le système multiroom audio d'ELIXINTEC vous permet de diffuser votre musique dans toutes les pièces de votre maison, de façon synchronisée ou indépendante. Salon, cuisine, terrasse, chambre, piscine... contrôlez chaque zone depuis votre smartphone, tablette ou une interface murale tactile.",
+      "features": [
+        "Jusqu'à 16 zones audio indépendantes",
+        "Streaming Spotify, Apple Music, radio",
+        "Enceintes encastrées haut de gamme",
+        "Contrôle par smartphone et tablette",
+        "Intégration avec système domotique",
+        "Couverture intérieure et extérieure"
+      ]
+    },
+    {
+      "slug": "intrusion",
+      "hero_image": "",
+      "intro_title": "Sécurité Totale pour Votre Propriété",
+      "intro_text": "ELIXINTEC installe des systèmes de sécurité et d'anti-intrusion complets pour protéger vos biens et votre famille. Alarmes Ajax certifiées, caméras IP 4K avec intelligence artificielle, contrôle d'accès biométrique et interphonie vidéo — une protection complète pilotable depuis votre smartphone.",
+      "features": [
+        "Alarme anti-intrusion Ajax certifiée",
+        "Caméras IP 4K avec détection IA",
+        "Contrôle d'accès biométrique",
+        "Interphonie vidéo IP",
+        "Alertes SMS et notifications push",
+        "Surveillance à distance 24h/24"
+      ]
+    }
+  ]
+}

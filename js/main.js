@@ -187,6 +187,55 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
+// ── Service page dynamic loader ───────────────────────────
+(function loadServicePage() {
+  const path  = window.location.pathname;
+  const match = path.match(/services\/([^/]+)\.html/);
+  if (!match) return;
+  const slug = match[1];
+
+  fetch('../_data/services.json')
+    .then(r => r.json())
+    .then(data => {
+      const svc = (data.services || []).find(s => s.slug === slug);
+      if (!svc) return;
+
+      // Hero image
+      if (svc.hero_image) {
+        const hero = document.querySelector('.page-hero');
+        if (hero) {
+          hero.style.backgroundImage =
+            `linear-gradient(rgba(13,27,53,0.72),rgba(13,27,53,0.72)), url('${svc.hero_image}')`;
+          hero.style.backgroundSize = 'cover';
+          hero.style.backgroundPosition = 'center';
+        }
+      }
+
+      // Intro title
+      if (svc.intro_title) {
+        const h2 = document.querySelector('.section h2');
+        if (h2) h2.textContent = svc.intro_title;
+      }
+
+      // Intro text — first non-hero paragraph in first section
+      if (svc.intro_text) {
+        const firstSection = document.querySelector('.section .reveal > p');
+        if (firstSection) firstSection.textContent = svc.intro_text;
+      }
+
+      // Features list
+      if (svc.features && svc.features.length) {
+        const list = document.querySelector('.feature-list');
+        if (list) {
+          list.innerHTML = svc.features
+            .map(f => `<li><span class="feature-icon">✅</span><span>${f}</span></li>`)
+            .join('');
+        }
+      }
+    })
+    .catch(() => {});
+})();
+
 // ── Réalisations filter ───────────────────────────────────
 const filterBtns = document.querySelectorAll('.filter-btn');
 if (filterBtns.length) {
