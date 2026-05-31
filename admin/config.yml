@@ -25,15 +25,21 @@ collections:
 
   - name: "realisations"
     label: "Realisations"
-    folder: "_realisations"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - {label: "Titre", name: "title", widget: "string"}
-      - {label: "Categorie", name: "category", widget: "select", options: ["domotique", "cfa", "reseau", "sonorisation", "home-cinema", "securite"]}
-      - {label: "Image", name: "image", widget: "image"}
-      - {label: "Description", name: "description", widget: "text"}
-      - {label: "Localisation", name: "location", widget: "string"}
+    files:
+      - label: "Liste des realisations"
+        name: "realisations_list"
+        file: "_data/realisations.json"
+        fields:
+          - label: "Realisations"
+            name: "items"
+            widget: "list"
+            fields:
+              - {label: "Titre", name: "title", widget: "string"}
+              - {label: "Categorie", name: "category", widget: "select", options: [{label: "Domotique", value: "domotique"}, {label: "Home Cinema", value: "cinema"}, {label: "Reseau WiFi", value: "reseau"}, {label: "CFA / Courant Faible", value: "cfa"}, {label: "Securite", value: "securite"}, {label: "Sonorisation", value: "sono"}]}
+              - {label: "Description", name: "description", widget: "text"}
+              - {label: "Localisation", name: "location", widget: "string"}
+              - {label: "Tags (virgule separateur)", name: "tags", widget: "list", required: false}
+              - {label: "Image (optionnel)", name: "image", widget: "image", required: false}
 
   - name: "blog"
     label: "Articles Blog"

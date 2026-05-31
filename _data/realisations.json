@@ -1,0 +1,67 @@
+{
+  "items": [
+    {
+      "title": "Villa Intelligente Premium – Souissi, Rabat",
+      "category": "domotique",
+      "description": "Installation KNX complète sur 450 m² : éclairage scénarisé, volets motorisés, climatisation centralisée, sécurité intégrée et contrôle via app mobile.",
+      "location": "Souissi, Rabat",
+      "tags": ["KNX", "450 m²", "Éclairage", "Volets"]
+    },
+    {
+      "title": "Salle Cinéma 12 Places – Ain Diab, Casablanca",
+      "category": "cinema",
+      "description": "Home cinéma de luxe avec projection laser 4K Sony, son Dolby Atmos 7.1.4, fauteuils motorisés, acoustique sur mesure et contrôle Crestron.",
+      "location": "Ain Diab, Casablanca",
+      "tags": ["Dolby Atmos", "4K Laser", "Crestron"]
+    },
+    {
+      "title": "Infrastructure WiFi Hôtel 120 Chambres – Marrakech",
+      "category": "reseau",
+      "description": "Déploiement WiFi professionnel Ubiquiti Enterprise sur 120 chambres. Couverture totale, gestion centralisée et portail d'authentification.",
+      "location": "Marrakech",
+      "tags": ["Ubiquiti", "120 chambres", "Portail captif"]
+    },
+    {
+      "title": "Sécurité Résidence Fermée – Temara",
+      "category": "securite",
+      "description": "Système complet pour résidence de 24 villas : contrôle d'accès biométrique, caméras IP 4K, alarme anti-intrusion centralisée et interphonie.",
+      "location": "Temara",
+      "tags": ["Biométrie", "4K", "Alarme", "Interphonie"]
+    },
+    {
+      "title": "Sonorisation Restaurant 200 Couverts – Rabat",
+      "category": "sono",
+      "description": "Système audio multizone Sonos + amplis professionnels. Musique d'ambiance adaptée à chaque zone (terrasse, salle, bar) pilotée par iPad.",
+      "location": "Rabat",
+      "tags": ["Multizone", "Sonos", "Contrôle iPad"]
+    },
+    {
+      "title": "Multiroom Audio Villa Moderne – Marrakech",
+      "category": "sono",
+      "description": "Système multiroom 8 zones couvrant l'intérieur et le jardin. Contrôle smartphone, intégration Spotify et radio internet.",
+      "location": "Marrakech",
+      "tags": ["8 zones", "Jardin", "Spotify"]
+    },
+    {
+      "title": "CFA Siège Social 5000 m² – Casablanca",
+      "category": "cfa",
+      "description": "Infrastructure complète courant faible pour siège de 5000 m² : VDI, téléphonie IP, contrôle d'accès, vidéosurveillance et domotique de bureau.",
+      "location": "Casablanca",
+      "tags": ["VDI", "IP Tel", "5000 m²"]
+    },
+    {
+      "title": "Vidéosurveillance Complexe Commercial – Rabat",
+      "category": "securite",
+      "description": "80 caméras IP 4K avec IA intégrée (détection de personnes, reconnaissance de plaques), NVR redondant et accès à distance sécurisé.",
+      "location": "Rabat",
+      "tags": ["80 caméras", "IA", "4K"]
+    },
+    {
+      "title": "Villa Connectée Crestron – Agdal, Rabat",
+      "category": "domotique",
+      "description": "Intégration Crestron complète : écrans tactiles muraux, contrôle AV, éclairage DMX, piscine connectée et home cinéma intégré.",
+      "location": "Agdal, Rabat",
+      "tags": ["Crestron", "DMX", "Piscine"]
+    }
+  ]
+}
