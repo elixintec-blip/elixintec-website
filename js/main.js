@@ -2,15 +2,63 @@
    ELIXINTEC - Main JavaScript
    ============================================================ */
 
-const CONTACT_PHONE = '+212661090654';
-const WHATSAPP_NUMBER  = '212665311687';
-const CONTACT_EMAIL    = 'contact@elixintec.com';
+let CONTACT_PHONE  = '+212661090654';
+let WHATSAPP_NUMBER = '212665311687';
+let CONTACT_EMAIL   = 'contact@elixintec.com';
 
 function openWhatsApp(message) {
   const msg = message || 'Bonjour ELIXINTEC, je souhaite une consultation gratuite.';
   const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
   window.open(url, '_blank');
 }
+
+// ── Settings loader ───────────────────────────────────────────
+(function loadSettings() {
+  const depth = window.location.pathname.split('/').filter(Boolean).length - 1;
+  const base  = depth > 0 ? '../'.repeat(depth) : '';
+  fetch(base + '_data/settings.json')
+    .then(r => r.json())
+    .then(s => {
+      if (s.phone)    CONTACT_PHONE  = s.phone.replace(/\s/g, '');
+      if (s.whatsapp) WHATSAPP_NUMBER = s.whatsapp.replace(/[^0-9]/g, '');
+
+      // Update all tel: links
+      if (s.phone) {
+        document.querySelectorAll('a[href^="tel:"]').forEach(a => {
+          a.href = 'tel:' + CONTACT_PHONE;
+          if (a.textContent.trim().startsWith('+')) a.textContent = s.phone;
+        });
+      }
+
+      // Update all wa.me links
+      if (s.whatsapp) {
+        document.querySelectorAll('a[href^="https://wa.me/"]').forEach(a => {
+          a.href = 'https://wa.me/' + WHATSAPP_NUMBER;
+          if (a.textContent.trim().startsWith('+')) a.textContent = s.whatsapp;
+        });
+      }
+
+      // Update [data-setting] elements
+      document.querySelectorAll('[data-setting]').forEach(el => {
+        const key = el.dataset.setting;
+        if (!s[key]) return;
+        if (el.tagName === 'A' && el.href.includes('mailto:')) {
+          el.href = 'mailto:' + s[key];
+          el.textContent = s[key];
+        } else if (el.dataset.settingType === 'stat') {
+          const m = String(s[key]).match(/^(\d+)(.*)/);
+          if (m) {
+            el.dataset.target  = m[1];
+            el.dataset.suffix  = m[2];
+            el.textContent     = '0' + m[2];
+          }
+        } else {
+          el.textContent = s[key];
+        }
+      });
+    })
+    .catch(() => {});
+})();
 
 // ── Navbar scroll effect ──────────────────────────────────────
 const navbar = document.getElementById('navbar');
