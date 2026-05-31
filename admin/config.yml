@@ -43,13 +43,19 @@ collections:
 
   - name: "blog"
     label: "Articles Blog"
-    folder: "_posts"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
-      - {label: "Titre", name: "title", widget: "string"}
-      - {label: "Date", name: "date", widget: "datetime"}
-      - {label: "Image de couverture", name: "image", widget: "image", required: false}
-      - {label: "Resume", name: "summary", widget: "text"}
-      - {label: "Contenu", name: "body", widget: "markdown"}
-      - {label: "Categorie", name: "category", widget: "select", options: ["Domotique", "CFA", "KNX", "Reseau WiFi", "Sonorisation", "Home Cinema", "Securite"]}
+    files:
+      - label: "Liste des articles"
+        name: "blog_list"
+        file: "_data/blog.json"
+        fields:
+          - label: "Articles"
+            name: "posts"
+            widget: "list"
+            fields:
+              - {label: "Slug (ex: mon-article)", name: "slug", widget: "string"}
+              - {label: "Titre", name: "title", widget: "string"}
+              - {label: "Date (YYYY-MM-DD)", name: "date", widget: "string"}
+              - {label: "Categorie", name: "category", widget: "select", options: ["Domotique", "Home Cinema", "Reseau & WiFi", "Sonorisation", "Securite", "Courant Faible", "Multiroom Audio", "Smart Home", "Conseils"]}
+              - {label: "Resume", name: "summary", widget: "text"}
+              - {label: "Temps de lecture (min)", name: "readTime", widget: "string"}
+              - {label: "Image URL ou upload", name: "image", widget: "image", required: false}

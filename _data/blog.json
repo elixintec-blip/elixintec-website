@@ -1,0 +1,94 @@
+{
+  "posts": [
+    {
+      "slug": "domotique-knx",
+      "title": "Qu'est-ce que la Domotique et Pourquoi l'Adopter au Maroc ?",
+      "date": "2025-01-15",
+      "category": "Domotique",
+      "summary": "Découvrez le protocole KNX, standard mondial de l'automatisation du bâtiment, et pourquoi il s'impose comme la référence au Maroc pour les projets résidentiels et tertiaires.",
+      "image": "https://images.unsplash.com/photo-1527689368864-3a821dbccc34?w=600&q=80&fit=crop&auto=format",
+      "readTime": "6"
+    },
+    {
+      "slug": "home-cinema",
+      "title": "Salle de Cinéma Maison : Guide Complet pour Votre Home Cinéma",
+      "date": "2025-01-22",
+      "category": "Home Cinéma",
+      "summary": "Projecteur 4K, acoustique, écran motorisé, ampli Dolby Atmos... Tout ce qu'il faut savoir pour créer une salle de cinéma privée digne de ce nom dans votre villa au Maroc.",
+      "image": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=600&q=80&fit=crop&auto=format",
+      "readTime": "8"
+    },
+    {
+      "slug": "reseau-wifi-pro",
+      "title": "WiFi Professionnel au Maroc : Pourquoi Votre Box Opérateur ne Suffit Pas ?",
+      "date": "2025-02-05",
+      "category": "Réseau & WiFi",
+      "summary": "Zone morte, déconnexions, signal faible en terrasse... Comprenez les limites des box grand public et découvrez les solutions WiFi d'entreprise adaptées aux grandes surfaces.",
+      "image": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=600&q=80&fit=crop&auto=format",
+      "readTime": "5"
+    },
+    {
+      "slug": "sonorisation-professionnelle",
+      "title": "Installation Sonorisation Professionnelle : Guide Complet pour Particuliers et Professionnels",
+      "date": "2025-02-12",
+      "category": "Sonorisation",
+      "summary": "Enceintes encastrées, amplificateurs, câblage audio… Un guide exhaustif pour comprendre les composants d'une installation sonorisation de qualité dans villas, hôtels et commerces.",
+      "image": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&q=80&fit=crop&auto=format",
+      "readTime": "7"
+    },
+    {
+      "slug": "securite-intrusion",
+      "title": "Système Anti-Intrusion : Comment Protéger Efficacement Votre Maison au Maroc ?",
+      "date": "2025-02-20",
+      "category": "Sécurité",
+      "summary": "Détecteurs de mouvement, sirènes, télésurveillance, alarmes connectées... Découvrez comment concevoir un système d'intrusion fiable et adapté à votre contexte au Maroc.",
+      "image": "https://images.unsplash.com/photo-1580428456276-2b7b4e6e3fb4?w=600&q=80&fit=crop&auto=format",
+      "readTime": "6"
+    },
+    {
+      "slug": "courant-faible-definition",
+      "title": "Courant Faible (CFA) : Définition et Applications dans le Bâtiment Moderne",
+      "date": "2025-03-03",
+      "category": "Courant Faible",
+      "summary": "Qu'est-ce que le courant faible exactement ? Réseaux, vidéosurveillance, contrôle d'accès, domotique... Comprenez tous les systèmes CFA que cache votre bâtiment.",
+      "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80&fit=crop&auto=format",
+      "readTime": "5"
+    },
+    {
+      "slug": "crestron-vs-knx",
+      "title": "Crestron vs KNX : Quelle Solution Domotique Choisir pour Votre Projet ?",
+      "date": "2025-03-15",
+      "category": "Domotique",
+      "summary": "Deux standards de référence mondiale, deux philosophies différentes. Notre comparatif détaillé vous aide à choisir la solution la plus adaptée à votre budget et à votre usage.",
+      "image": "https://images.unsplash.com/photo-1752262167753-37a0ec83f614?w=600&q=80&fit=crop&auto=format",
+      "readTime": "7"
+    },
+    {
+      "slug": "multiroom-audio",
+      "title": "Multiroom Audio : Écoutez Votre Musique dans Toute Votre Maison",
+      "date": "2025-03-28",
+      "category": "Multiroom Audio",
+      "summary": "Salon, cuisine, terrasse, chambre... Diffusez votre musique de façon synchronisée ou indépendante dans toutes les pièces grâce aux systèmes multiroom modernes.",
+      "image": "https://images.unsplash.com/photo-1711127093141-caea1718c784?w=600&q=80&fit=crop&auto=format",
+      "readTime": "6"
+    },
+    {
+      "slug": "smart-home-maroc",
+      "title": "Smart Home au Maroc : Tendances, Avantages et Comment Commencer en 2025",
+      "date": "2025-04-05",
+      "category": "Smart Home",
+      "summary": "Le marché de la maison intelligente explose au Maroc. Découvrez les tendances 2025, les avantages concrets pour votre quotidien et comment lancer votre projet smart home.",
+      "image": "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=80&fit=crop&auto=format",
+      "readTime": "8"
+    },
+    {
+      "slug": "choisir-installateur-domotique-maroc",
+      "title": "Comment Choisir son Installateur Domotique Certifié au Maroc ?",
+      "date": "2025-04-14",
+      "category": "Conseils",
+      "summary": "Certifications KNX, expérience Crestron, références clients, garanties... Les critères essentiels pour ne pas vous tromper dans le choix de votre intégrateur domotique.",
+      "image": "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=600&q=80&fit=crop&auto=format",
+      "readTime": "5"
+    }
+  ]
+}
